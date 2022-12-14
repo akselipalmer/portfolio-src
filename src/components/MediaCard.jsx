@@ -23,11 +23,12 @@ export default function MediaCard() {
     },
     {
       img: quizzicalImg,
-      title: "Quizzical Game!",
+      title: "Quizical Game!",
       description:
         "Here's a little quiz game I made as a solo project while I was enrolled in Scrimba Front End Development Course.",
       link: "https://quizzical-solo-project.netlify.app/",
-      moreInfo: "I'm building this using React, Interacting with the quiz API.",
+      moreInfo:
+        "I built this using React. It interacts with the Open Trivia Database.",
     },
   ];
 

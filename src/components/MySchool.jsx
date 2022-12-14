@@ -24,7 +24,7 @@ export default function MySchool() {
       schoolName: "Global Awakening",
       educationType: "Leadership",
       description:
-        "Studied for 3 years. 1st year was spend on personal developmant. 2nd year I focued on building leadership skills. 3rd year I applied the knowldge I had learned and Interned in a leaderhip roll in a church in Norther Ireland.",
+        "Studied for 3 years. The 1st year was spent on personal development. 2nd year I focused on building leadership skills. 3rd year I applied the knowledge I had learned and Interned in a leadership role in a church in Northern Ireland.",
       img: WorldImg,
       alt: "Map of World",
       href: "https://globalawakening.com/",

@@ -22,28 +22,25 @@ import MyWork from "./components/MyWork";
 import MySchool from "./components/MySchool";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
-const theme = createTheme();
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import ContactCard from "./components/ContactCard";
 
 export default function Album() {
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <Box>
       <AppBar position="relative">
         <Toolbar>
-          <DataObjectIcon />
-          <Typography variant="h6" color="inherit" noWrap>
+          <DataObjectIcon fontSize="large" />
+          <Typography variant="h6" color="inherit" noWrap sx={{ ml: 2 }}>
             Akseli Palmer Portfolio
           </Typography>
         </Toolbar>
@@ -83,9 +80,9 @@ export default function Album() {
                 color="text.secondary"
                 paragraph
               >
-                I am a Front End Developer! I love builing amazing projects.
-                Currently I've been intering and building projects at Kalio
-                Tech.
+                I am a Full Stack Web Developer! I love building amazing
+                projects. I've been interning and building projects at Kallio
+                Tech. I am currently looking for a new position.
               </Typography>
             </Box>
             <Stack alignItems="center">
@@ -94,6 +91,20 @@ export default function Album() {
                 src={AvatarImg}
                 sx={{ width: 156, height: 156 }}
               />
+
+              <Button onClick={handleToggle} sx={{ mt: 5 }} variant="contained">
+                CONTACT ME
+              </Button>
+              <Backdrop
+                sx={{
+                  color: "#fff",
+                  zIndex: (theme) => theme.zIndex.drawer + 1,
+                }}
+                open={open}
+                onClick={handleClose}
+              >
+                <ContactCard />
+              </Backdrop>
             </Stack>
           </Container>
         </Box>
@@ -127,19 +138,19 @@ export default function Album() {
         </Container>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
+      <Box
+        sx={{
+          bgcolor: "background.paper",
+          p: 6,
+          display: "flex",
+          justifyContent: "center",
+        }}
+        component="footer"
+      >
+        <Button onClick={handleToggle} sx={{ mt: 5 }} variant="contained">
+          CONTACT ME
+        </Button>
+        {/* <Copyright /> */}
       </Box>
     </Box>
   );
