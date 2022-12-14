@@ -1,10 +1,10 @@
-import { Box, Container, Typography } from "@mui/material";
-import React, { Component } from "react";
+import { Box, Typography } from "@mui/material";
+import React from "react";
 
 export default function MyWork() {
   const history = [
     {
-      jobTitle: "Front End Developer",
+      jobTitle: "Full Stack Web Developer",
       location: "Kallio Tech",
       description:
         "I'm currently working as a Front End Developer at Kallio Tech. I'm working on an Adventure application that connects explorers with local adventures. I've linked the page in my projects.",

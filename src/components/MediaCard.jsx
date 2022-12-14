@@ -7,8 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import adventureImg from "../assets/adventure-img.png";
 import quizzicalImg from "../assets/Quzzical.png";
-import { Box, Stack } from "@mui/system";
-import { Divider } from "@mui/material";
+import { Stack } from "@mui/system";
 
 export default function MediaCard() {
   const cards = [
