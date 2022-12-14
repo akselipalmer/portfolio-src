@@ -4,6 +4,12 @@ import React, { Component } from "react";
 export default function MyWork() {
   const history = [
     {
+      jobTitle: "Front End Developer",
+      location: "Kalio Tech",
+      description:
+        "I'm currently working as a Front End Developer at Kalio Tech. I'm working on an Adventure application that connects explorers with local adventures. I've linked the page in my projects.",
+    },
+    {
       jobTitle: "SERVER",
       location: "Sunset Grill | Manakin, VA",
       description:

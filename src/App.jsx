@@ -20,6 +20,7 @@ import { Avatar, Divider } from "@mui/material";
 import AvatarImg from "../src/assets/Avatar.jpg";
 import MyWork from "./components/MyWork";
 import MySchool from "./components/MySchool";
+import DataObjectIcon from "@mui/icons-material/DataObject";
 
 function Copyright() {
   return (
@@ -41,6 +42,7 @@ export default function Album() {
     <Box>
       <AppBar position="relative">
         <Toolbar>
+          <DataObjectIcon />
           <Typography variant="h6" color="inherit" noWrap>
             Akseli Palmer Portfolio
           </Typography>
@@ -114,12 +116,13 @@ export default function Album() {
             alignItems="center"
             flexWrap="wrap"
             pb={6}
+            pt={6}
           >
             <MediaCard />
           </Stack>
-          <Divider />
+          <Divider sx={{ pt: 6 }} />
           <MyWork />
-          <Divider />
+          <Divider sx={{ pt: 6 }} />
           <MySchool />
         </Container>
       </main>
