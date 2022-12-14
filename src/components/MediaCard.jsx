@@ -28,7 +28,7 @@ export default function MediaCard() {
   function DisplayCards() {
     return cards.map((card) => {
       return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 }} key={card.title}>
           <CardMedia
             component="img"
             height="140"

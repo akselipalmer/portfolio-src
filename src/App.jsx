@@ -16,7 +16,10 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import MediaCard from "./components/MediaCard";
-import { Divider } from "@mui/material";
+import { Avatar, Divider } from "@mui/material";
+import AvatarImg from "../src/assets/Avatar.jpg";
+import MyWork from "./components/MyWork";
+import MySchool from "./components/MySchool";
 
 function Copyright() {
   return (
@@ -53,32 +56,43 @@ export default function Album() {
           }}
         >
           <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h3"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              Hi! I am
-            </Typography>
-            <Typography
-              component="h2"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              Akseli Palmer!
-            </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              I am a Front End Developer!
-            </Typography>
+            <Box>
+              <Typography
+                component="h1"
+                variant="h3"
+                align="center"
+                color="text.primary"
+                gutterBottom
+              >
+                Hi! I am
+              </Typography>
+              <Typography
+                component="h2"
+                variant="h2"
+                align="center"
+                color="text.primary"
+                gutterBottom
+              >
+                Akseli Palmer!
+              </Typography>
+              <Typography
+                variant="h5"
+                align="center"
+                color="text.secondary"
+                paragraph
+              >
+                I am a Front End Developer! I love builing amazing projects.
+                Currently I've been intering and building projects at Kalio
+                Tech.
+              </Typography>
+            </Box>
+            <Stack alignItems="center">
+              <Avatar
+                alt="Remy Sharp"
+                src={AvatarImg}
+                sx={{ width: 156, height: 156 }}
+              />
+            </Stack>
           </Container>
         </Box>
         <Container maxWidth="lg">
@@ -104,6 +118,9 @@ export default function Album() {
             <MediaCard />
           </Stack>
           <Divider />
+          <MyWork />
+          <Divider />
+          <MySchool />
         </Container>
       </main>
       {/* Footer */}
