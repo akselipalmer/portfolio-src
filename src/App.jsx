@@ -1,6 +1,5 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
-import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,22 +8,10 @@ import Container from "@mui/material/Container";
 import MediaCard from "./components/MediaCard";
 import { Avatar, Divider } from "@mui/material";
 import AvatarImg from "../src/assets/Avatar.jpg";
-import MyWork from "./components/MyWork";
 import MySchool from "./components/MySchool";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 
-import Backdrop from "@mui/material/Backdrop";
-import ContactCard from "./components/ContactCard";
-
 export default function Album() {
-  const [open, setOpen] = React.useState(false);
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
   return (
     <Box>
       <AppBar position="relative">
@@ -77,24 +64,10 @@ export default function Album() {
             </Box>
             <Stack alignItems="center">
               <Avatar
-                alt="Remy Sharp"
+                alt="Akseli Palmer"
                 src={AvatarImg}
                 sx={{ width: 156, height: 156 }}
               />
-
-              <Button onClick={handleToggle} sx={{ mt: 5 }} variant="contained">
-                CONTACT ME
-              </Button>
-              <Backdrop
-                sx={{
-                  color: "#fff",
-                  zIndex: (theme) => theme.zIndex.drawer + 1,
-                }}
-                open={open}
-                onClick={handleClose}
-              >
-                <ContactCard />
-              </Backdrop>
             </Stack>
           </Container>
         </Box>
@@ -121,8 +94,8 @@ export default function Album() {
           >
             <MediaCard />
           </Stack>
-          <Divider sx={{ pt: 6 }} />
-          <MyWork />
+          {/* <Divider sx={{ pt: 6 }} />
+          <MyWork /> */}
           <Divider sx={{ pt: 6 }} />
           <MySchool />
         </Container>
@@ -137,9 +110,6 @@ export default function Album() {
         }}
         component="footer"
       >
-        <Button onClick={handleToggle} sx={{ mt: 5 }} variant="contained">
-          CONTACT ME
-        </Button>
         {/* <Copyright /> */}
       </Box>
     </Box>
