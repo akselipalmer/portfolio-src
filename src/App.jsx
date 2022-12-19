@@ -94,8 +94,7 @@ export default function Album() {
           >
             <MediaCard />
           </Stack>
-          {/* <Divider sx={{ pt: 6 }} />
-          <MyWork /> */}
+
           <Divider sx={{ pt: 6 }} />
           <MySchool />
         </Container>

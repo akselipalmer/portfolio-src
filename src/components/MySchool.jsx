@@ -23,6 +23,7 @@ export default function MySchool() {
     return education.map((education) => {
       return (
         <Button
+          sx={{ px: 2, py: 1 }}
           size="large"
           variant="outlined"
           startIcon={<education.img />}
